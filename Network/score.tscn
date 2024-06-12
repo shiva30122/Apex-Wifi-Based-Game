@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp6n6tp3lwrdo"]
+
+[ext_resource type="Script" path="res://Network/Score.gd" id="1_apiql"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_bbppt"]
+
+[node name="Score" type="Node2D"]
+position = Vector2(381, 138)
+script = ExtResource("1_apiql")
+
+[node name="222" type="Label" parent="."]
+offset_left = -40.0
+offset_top = -76.0
+offset_right = 63.0
+offset_bottom = -53.0
+text = "Score System"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_bbppt")

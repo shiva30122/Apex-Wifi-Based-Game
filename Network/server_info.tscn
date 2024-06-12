@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpqlhqyadbpvs"]
+
+[ext_resource type="Script" path="res://Network/ServerInfo.gd" id="1_7sw04"]
+[ext_resource type="AudioStream" uid="uid://bmhnil1rlwybh" path="res://Sound/Click.wav" id="2_ekjkr"]
+
+[node name="ServerInfo" type="HBoxContainer"]
+offset_right = 162.0
+offset_bottom = 31.0
+script = ExtResource("1_7sw04")
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "test label"
+
+[node name="Ip" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayerCount" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "5"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "  Join  "
+
+[node name="Click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_ekjkr")
+volume_db = 24.0
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

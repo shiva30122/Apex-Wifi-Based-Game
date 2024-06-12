@@ -1,0 +1,433 @@
+[gd_scene load_steps=47 format=3 uid="uid://cwld7ti0ms68j"]
+
+[ext_resource type="Script" path="res://Player/Script/player.gd" id="1_3us0m"]
+[ext_resource type="Script" path="res://Player/Gun_pick.gd" id="2_asoul"]
+[ext_resource type="PackedScene" uid="uid://b3kaipvtmfnyq" path="res://Weapons/famas.tscn" id="2_elppd"]
+[ext_resource type="PackedScene" uid="uid://jfbdpw60m5r" path="res://Weapons/Pistol.tscn" id="2_y1fwr"]
+[ext_resource type="Script" path="res://Player/Script/TextureProgressBar.gd" id="3_jpo7k"]
+[ext_resource type="Texture2D" uid="uid://dld54qw3mao0w" path="res://Player/Images/Main Character - Male - Full spritesheet - No Guide.png" id="4_f78pc"]
+[ext_resource type="PackedScene" uid="uid://cjpenyiir83rb" path="res://Weapons/sniper.tscn" id="4_qrnnh"]
+[ext_resource type="Texture2D" uid="uid://cnser8ac1hovj" path="res://Weapons/Image/Famas.png" id="5_fi500"]
+[ext_resource type="Texture2D" uid="uid://j2ipstjxjiyg" path="res://Player/Images/138547-200-removebg-preview.png" id="6_5r2ol"]
+[ext_resource type="Texture2D" uid="uid://cejjt77803284" path="res://Settings/Images/7787560_mute_sound_music_audio_icon.png" id="11_c6xb7"]
+[ext_resource type="PackedScene" uid="uid://cojr8eoej07a4" path="res://Settings/Setting.tscn" id="12_bnl7v"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://Player/joystick.tscn" id="12_ceb5o"]
+[ext_resource type="Script" path="res://Settings/CustomSize.gd" id="12_xt8fd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qby4a"]
+radius = 63.1981
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igc27"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(0, 544, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsum6"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(32, 544, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxbqc"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(64, 544, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ad61v"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(96, 544, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q001x"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(128, 544, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywqmd"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(160, 544, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02ocl"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(192, 544, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qt7uo"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(224, 544, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wskdl"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snm0b"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjhv6"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkdw0"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4q5n3"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ow2xj"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udn8u"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(160, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14bfx"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(128, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4e8l"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(192, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gs62c"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(96, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ah5vw"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(32, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2u677"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(64, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60ibr"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2k1a"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgt7k"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ui4yo"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ctdv"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yn5hq"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12xec"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4c8o"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(160, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bde21"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(192, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kj0x"]
+atlas = ExtResource("4_f78pc")
+region = Rect2(224, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l6rhg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igc27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsum6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxbqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ad61v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q001x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywqmd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02ocl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qt7uo")
+}],
+"loop": false,
+"name": &"Die",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wskdl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snm0b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjhv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkdw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4q5n3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ow2xj")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udn8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14bfx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4e8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gs62c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ah5vw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2u677")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60ibr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udn8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2k1a")
+}],
+"loop": false,
+"name": &"Jump",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgt7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ui4yo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ctdv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yn5hq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12xec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4c8o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bde21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kj0x")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 22.0
+}]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_c85fd"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = false
+properties/0/replication_mode = 1
+properties/1/path = NodePath("GunRotation:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath(".:syncPos")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+properties/3/path = NodePath(".:syncRot")
+properties/3/spawn = true
+properties/3/replication_mode = 1
+properties/4/path = NodePath(".:visible")
+properties/4/spawn = true
+properties/4/replication_mode = 2
+properties/5/path = NodePath(".:health")
+properties/5/spawn = true
+properties/5/replication_mode = 1
+properties/6/path = NodePath("Name:text")
+properties/6/spawn = true
+properties/6/replication_mode = 1
+properties/7/path = NodePath("Animation:animation")
+properties/7/spawn = true
+properties/7/replication_mode = 1
+properties/8/path = NodePath("Animation:frame")
+properties/8/spawn = true
+properties/8/replication_mode = 1
+properties/9/path = NodePath("Animation:position")
+properties/9/spawn = true
+properties/9/replication_mode = 1
+properties/10/path = NodePath("Animation:flip_h")
+properties/10/spawn = true
+properties/10/replication_mode = 1
+properties/11/path = NodePath("Animation:flip_v")
+properties/11/spawn = true
+properties/11/replication_mode = 1
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("Right_JoyStick") groups=["Player"]]
+z_index = 2
+position = Vector2(780, 393)
+script = ExtResource("1_3us0m")
+Max_health = 100
+health = 100
+Lives = 100
+speed = 220
+Right_JoyStick = NodePath("CanvasLayer/Right")
+Famas = ExtResource("2_elppd")
+Pistol = ExtResource("2_y1fwr")
+Sniper = ExtResource("4_qrnnh")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -321.0
+offset_top = -362.0
+offset_right = 333.0
+offset_bottom = -288.0
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-21, -21)
+shape = SubResource("CircleShape2D_qby4a")
+script = ExtResource("2_asoul")
+
+[node name="ProgressBar" type="ProgressBar" parent="." node_paths=PackedStringArray("Health")]
+offset_left = -67.0
+offset_top = -132.0
+offset_right = 30.0
+offset_bottom = -105.0
+script = ExtResource("3_jpo7k")
+Health = NodePath("..")
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(-17, -11)
+scale = Vector2(5.43359, 5.57812)
+sprite_frames = SubResource("SpriteFrames_l6rhg")
+animation = &"Idle"
+offset = Vector2(-0.73616, -8.60505)
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-23, -21)
+polygon = PackedVector2Array(29, 48, 23, -38, -13, -39, -21, 11, -29, 10, -28, 31, -25, 50)
+
+[node name="GunRotation" type="Node2D" parent="."]
+position = Vector2(-42, -12)
+
+[node name="Famas" type="Sprite2D" parent="GunRotation"]
+texture_filter = 1
+position = Vector2(19, 1.99999)
+scale = Vector2(0.810625, 0.49519)
+texture = ExtResource("5_fi500")
+offset = Vector2(19.18, 0.46173)
+
+[node name="BulletSpawn" type="Node2D" parent="GunRotation"]
+position = Vector2(49, 0)
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." groups=["Mul"]]
+replication_config = SubResource("SceneReplicationConfig_c85fd")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-1, -36)
+enabled = false
+
+[node name="Name" type="Label" parent="."]
+offset_left = -71.0
+offset_top = -109.0
+offset_right = 99.0
+offset_bottom = -86.0
+text = "UnKnown_Person"
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+spawn_path = NodePath("../GunRotation/BulletSpawn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Right" parent="CanvasLayer" instance=ExtResource("12_ceb5o")]
+auto_translate_mode = 1
+visible = false
+anchor_left = 0.817
+anchor_top = 0.621
+anchor_right = 0.817
+anchor_bottom = 0.621
+offset_left = -81.3501
+offset_top = -57.12
+offset_right = 81.6499
+offset_bottom = 65.88
+grow_horizontal = 0
+pivot_offset = Vector2(81.9893, 55.6655)
+Gun = true
+pressed_color = Color(1.11663e-05, 0.839428, 0.926639, 1)
+deadzone_size = 22.0
+clampzone_size = 90.0
+action_left = "GunLeft"
+action_right = "GunRight"
+FireMod = true
+
+[node name="Left" parent="CanvasLayer" instance=ExtResource("12_ceb5o")]
+visible = false
+anchor_left = 0.167
+anchor_top = 0.609
+anchor_right = 0.167
+anchor_bottom = 0.609
+offset_left = -74.96
+offset_top = -65.48
+offset_right = 76.04
+offset_bottom = 58.52
+scale = Vector2(1.4, 1.438)
+pivot_offset = Vector2(76.5071, 54.6787)
+deadzone_size = 22.0
+clampzone_size = 90.0
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(-606, 1432)
+scale = Vector2(0.54, 0.5)
+texture_normal = ExtResource("6_5r2ol")
+
+[node name="GunPick" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(-976, 1665)
+scale = Vector2(0.273438, 0.195312)
+texture_normal = ExtResource("11_c6xb7")
+script = ExtResource("12_xt8fd")
+
+[node name="GunPick2" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(-1309, 1652)
+scale = Vector2(0.273438, 0.195312)
+texture_normal = ExtResource("11_c6xb7")
+script = ExtResource("12_xt8fd")
+
+[node name="Setting" parent="CanvasLayer" instance=ExtResource("12_bnl7v")]
+position = Vector2(-608, 25)
+scale = Vector2(1.4, 1.438)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

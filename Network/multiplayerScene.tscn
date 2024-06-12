@@ -1,0 +1,273 @@
+[gd_scene load_steps=9 format=3 uid="uid://bwtcufnykv2gk"]
+
+[ext_resource type="Script" path="res://Network/MutiplayerController.gd" id="1_omkav"]
+[ext_resource type="Texture2D" uid="uid://bav8qrwac5o5p" path="res://bg.jpg" id="2_jcvh1"]
+[ext_resource type="Script" path="res://Network/ServerBrowser.gd" id="2_njv3o"]
+[ext_resource type="PackedScene" uid="uid://dpqlhqyadbpvs" path="res://Network/server_info.tscn" id="3_jpahl"]
+[ext_resource type="AudioStream" uid="uid://bmhnil1rlwybh" path="res://Sound/Click.wav" id="4_qusem"]
+[ext_resource type="AudioStream" uid="uid://2e7dp8wnabu2" path="res://Sound/Start.wav" id="5_a4w3s"]
+[ext_resource type="AudioStream" uid="uid://dvpyhwm4ac5i1" path="res://Sound/Bord.wav" id="6_uy6nk"]
+
+[sub_resource type="FontFile" id="FontFile_r28d7"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/55/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/88/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/78/0 = Vector2(0, 0)
+cache/0/55/0/ascent = 0.0
+cache/0/55/0/descent = 0.0
+cache/0/55/0/underline_position = 0.0
+cache/0/55/0/underline_thickness = 0.0
+cache/0/55/0/scale = 1.0
+cache/0/55/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/55/0/kerning_overrides/55/0 = Vector2(0, 0)
+cache/0/55/0/kerning_overrides/88/0 = Vector2(0, 0)
+cache/0/55/0/kerning_overrides/78/0 = Vector2(0, 0)
+cache/0/88/0/ascent = 0.0
+cache/0/88/0/descent = 0.0
+cache/0/88/0/underline_position = 0.0
+cache/0/88/0/underline_thickness = 0.0
+cache/0/88/0/scale = 1.0
+cache/0/88/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/88/0/kerning_overrides/55/0 = Vector2(0, 0)
+cache/0/88/0/kerning_overrides/88/0 = Vector2(0, 0)
+cache/0/88/0/kerning_overrides/78/0 = Vector2(0, 0)
+cache/0/78/0/ascent = 0.0
+cache/0/78/0/descent = 0.0
+cache/0/78/0/underline_position = 0.0
+cache/0/78/0/underline_thickness = 0.0
+cache/0/78/0/scale = 1.0
+cache/0/78/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/78/0/kerning_overrides/55/0 = Vector2(0, 0)
+cache/0/78/0/kerning_overrides/88/0 = Vector2(0, 0)
+cache/0/78/0/kerning_overrides/78/0 = Vector2(0, 0)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 260.0
+offset_top = -7.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(998, 542)
+script = ExtResource("1_omkav")
+Address = "127.0.0.1"
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(528.75, 436)
+scale = Vector2(2.15611, 2.08444)
+texture = ExtResource("2_jcvh1")
+
+[node name="Host" type="Button" parent="."]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 120.0
+offset_right = 251.0
+offset_bottom = 168.0
+text = "Host"
+
+[node name="Join" type="Button" parent="."]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 120.0
+offset_right = 447.0
+offset_bottom = 168.0
+text = "Join"
+
+[node name="Join2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 180.0
+offset_right = 617.0
+offset_bottom = 228.0
+text = "Join_by_IP"
+
+[node name="Join3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 636.0
+offset_top = 181.0
+offset_right = 813.0
+offset_bottom = 229.0
+text = "Show_IP
+"
+
+[node name="StartGame" type="Button" parent="."]
+layout_mode = 0
+offset_left = 479.0
+offset_top = 120.0
+offset_right = 656.0
+offset_bottom = 168.0
+text = "Start Game"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 51.0
+offset_right = 508.0
+offset_bottom = 96.0
+alignment = 1
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 188.0
+offset_right = 425.0
+offset_bottom = 219.0
+alignment = 1
+
+[node name="LineEdit3" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 580.0
+offset_right = 708.0
+offset_bottom = 667.0
+theme_override_fonts/font = SubResource("FontFile_r28d7")
+theme_override_font_sizes/font_size = 78
+text = "Press Join or Host !.."
+editable = false
+
+[node name="LineEdit4" type="LineEdit" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 514.0
+offset_top = 667.0
+offset_right = 1162.0
+offset_bottom = 723.0
+editable = false
+
+[node name="LineEdit5" type="LineEdit" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -127.0
+offset_top = 666.0
+offset_right = 515.0
+offset_bottom = 723.0
+editable = false
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 70.0
+offset_right = 122.0
+offset_bottom = 96.0
+text = "Name"
+
+[node name="ServerBrowser" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_njv3o")
+serverInfo = ExtResource("3_jpahl")
+
+[node name="BroadcastTimer" type="Timer" parent="ServerBrowser"]
+
+[node name="Label2" type="Label" parent="ServerBrowser"]
+visible = false
+layout_mode = 0
+offset_left = 568.0
+offset_top = 49.0
+offset_right = 815.0
+offset_bottom = 101.0
+text = "Connecting Vai Wifi or Hotspot :"
+
+[node name="Panel" type="Panel" parent="ServerBrowser"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 248.0
+offset_right = 687.0
+offset_bottom = 580.0
+
+[node name="ServerInfo2" type="HBoxContainer" parent="ServerBrowser/Panel"]
+layout_mode = 2
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 649.0
+offset_bottom = 54.0
+
+[node name="Name" type="Label" parent="ServerBrowser/Panel/ServerInfo2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Name"
+horizontal_alignment = 1
+
+[node name="Ip" type="Label" parent="ServerBrowser/Panel/ServerInfo2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "IP"
+horizontal_alignment = 1
+
+[node name="PlayerCount" type="Label" parent="ServerBrowser/Panel/ServerInfo2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Player Count"
+horizontal_alignment = 1
+
+[node name="PlayerCount2" type="Label" parent="ServerBrowser/Panel/ServerInfo2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Join"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ServerBrowser/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -321.5
+offset_top = -116.0
+offset_right = 320.5
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 746.0
+offset_top = 86.0
+offset_right = 971.0
+offset_bottom = 155.0
+text = "test add player (host)"
+
+[node name="Button2" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 709.0
+offset_top = 339.0
+offset_right = 844.0
+offset_bottom = 401.0
+text = "Loacl_Instance"
+
+[node name="Click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_qusem")
+volume_db = 24.0
+
+[node name="Start" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_a4w3s")
+volume_db = 16.138
+attenuation = 1.56917
+
+[node name="BG" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_uy6nk")
+volume_db = 24.0
+autoplay = true
+
+[connection signal="button_down" from="Host" to="." method="_on_host_button_down"]
+[connection signal="button_down" from="Join" to="." method="_on_join_button_down"]
+[connection signal="pressed" from="Join2" to="." method="_on_join_2_pressed"]
+[connection signal="pressed" from="Join3" to="." method="_on_join_3_pressed"]
+[connection signal="button_down" from="StartGame" to="." method="_on_start_game_button_down"]
+[connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="timeout" from="ServerBrowser/BroadcastTimer" to="ServerBrowser" method="_on_broadcast_timer_timeout"]
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="finished" from="BG" to="." method="_on_bg_finished"]

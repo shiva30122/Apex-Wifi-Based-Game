@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=3 uid="uid://dxbd2nw5p034j"]
+
+[ext_resource type="Script" path="res://Composition/PickUp.gd" id="1_3legj"]
+[ext_resource type="PackedScene" uid="uid://b3kaipvtmfnyq" path="res://Weapons/famas.tscn" id="2_18tx5"]
+[ext_resource type="PackedScene" uid="uid://jfbdpw60m5r" path="res://Weapons/Pistol.tscn" id="2_346fi"]
+[ext_resource type="Texture2D" uid="uid://cbr0obpfu6pn5" path="res://Weapons/Image/images-removebg-preview.png" id="2_orvda"]
+[ext_resource type="PackedScene" uid="uid://cjpenyiir83rb" path="res://Weapons/sniper.tscn" id="4_yid3f"]
+[ext_resource type="Texture2D" uid="uid://t2g6o038j5kq" path="res://Weapons/Image/AirDrop.png" id="6_mpivy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_elgrg"]
+size = Vector2(35.5, 29.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t8yad"]
+size = Vector2(39, 32)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_8rnud"]
+properties/0/path = NodePath(".:CanPick")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:Guns")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+
+[node name="PickUp_Gun" type="CharacterBody2D"]
+script = ExtResource("1_3legj")
+Famas = ExtResource("2_18tx5")
+Pistol = ExtResource("2_346fi")
+Sniper = ExtResource("4_yid3f")
+Guns = Array[PackedScene]([ExtResource("2_346fi"), ExtResource("2_18tx5"), ExtResource("4_yid3f")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-17.75, -9.75)
+shape = SubResource("RectangleShape2D_elgrg")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 187.0
+offset_top = -59.0
+offset_right = 247.0
+offset_bottom = -36.0
+text = "Pick_UP"
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2(5, 7)
+scale = Vector2(0.306667, 0.128889)
+texture_normal = ExtResource("2_orvda")
+action = "ui_up"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-16.5, -10)
+shape = SubResource("RectangleShape2D_t8yad")
+
+[node name="AirDrop" type="Sprite2D" parent="."]
+position = Vector2(46, 13)
+scale = Vector2(0.298583, 0.258911)
+texture = ExtResource("6_mpivy")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_8rnud")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.533
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://Weapons/famas.tscn", "res://Weapons/sniper.tscn", "res://Weapons/Pistol.tscn")
+spawn_path = NodePath("..")
+spawn_limit = 1
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://btjd26le30oxi"]
+
+[ext_resource type="Script" path="res://GameMenu.gd" id="1_5nnsg"]
+
+[node name="GameMenu" type="Node"]
+script = ExtResource("1_5nnsg")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 61.0
+offset_right = 333.0
+offset_bottom = 105.0
+text = "Start"
+
+[node name="Button2" type="Button" parent="Control"]
+auto_translate_mode = 1
+layout_mode = 0
+offset_left = 266.0
+offset_top = 151.0
+offset_right = 380.0
+offset_bottom = 214.0
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Button2" to="." method="_on_button_2_pressed"]
