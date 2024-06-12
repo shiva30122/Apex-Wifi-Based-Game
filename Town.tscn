@@ -1,0 +1,393 @@
+[gd_scene load_steps=10 format=3 uid="uid://vs07m87uuk7a"]
+
+[ext_resource type="Script" path="res://Map/SceneManager.gd" id="1_flk0s"]
+[ext_resource type="Texture2D" uid="uid://6r0yoxgn80ir" path="res://Map/Classic/main_tileset.png" id="1_rsei1"]
+[ext_resource type="PackedScene" uid="uid://cwld7ti0ms68j" path="res://Player/player.tscn" id="2_e0y2f"]
+[ext_resource type="Texture2D" uid="uid://tnonfplskpfd" path="res://Map/Classic/building_03.png" id="2_t4uao"]
+[ext_resource type="Texture2D" uid="uid://cg5nd8583ee0n" path="res://Map/Classic/building_05.png" id="3_n7iva"]
+[ext_resource type="PackedScene" uid="uid://b0f2sarae5285" path="res://Ability Objects/Pick_Gun.tscn" id="4_ue55h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8ni6"]
+size = Vector2(16055, 525)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gmvk5"]
+texture = ExtResource("1_rsei1")
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+9:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+20:1/0 = 0
+21:1/0 = 0
+22:1/0 = 0
+23:1/0 = 0
+24:1/0 = 0
+25:1/0 = 0
+26:1/0 = 0
+1:2/0 = 0
+3:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+9:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+21:2/0 = 0
+22:2/0 = 0
+23:2/0 = 0
+24:2/0 = 0
+25:2/0 = 0
+26:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+9:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+21:3/0 = 0
+22:3/0 = 0
+23:3/0 = 0
+24:3/0 = 0
+25:3/0 = 0
+26:3/0 = 0
+9:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+22:4/0 = 0
+23:4/0 = 0
+24:4/0 = 0
+25:4/0 = 0
+26:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+22:5/0 = 0
+23:5/0 = 0
+24:5/0 = 0
+25:5/0 = 0
+26:5/0 = 0
+5:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+20:6/0 = 0
+21:6/0 = 0
+22:6/0 = 0
+23:6/0 = 0
+24:6/0 = 0
+25:6/0 = 0
+26:6/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+20:7/0 = 0
+21:7/0 = 0
+22:7/0 = 0
+23:7/0 = 0
+24:7/0 = 0
+25:7/0 = 0
+26:7/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+20:8/0 = 0
+21:8/0 = 0
+22:8/0 = 0
+23:8/0 = 0
+24:8/0 = 0
+25:8/0 = 0
+26:8/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+21:9/0 = 0
+22:9/0 = 0
+23:9/0 = 0
+24:9/0 = 0
+25:9/0 = 0
+26:9/0 = 0
+1:10/0 = 0
+3:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+16:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
+21:10/0 = 0
+22:10/0 = 0
+23:10/0 = 0
+24:10/0 = 0
+25:10/0 = 0
+26:10/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+15:11/0 = 0
+16:11/0 = 0
+18:11/0 = 0
+19:11/0 = 0
+20:11/0 = 0
+21:11/0 = 0
+22:11/0 = 0
+23:11/0 = 0
+24:11/0 = 0
+25:11/0 = 0
+26:11/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+16:12/0 = 0
+18:12/0 = 0
+19:12/0 = 0
+20:12/0 = 0
+21:12/0 = 0
+22:12/0 = 0
+23:12/0 = 0
+24:12/0 = 0
+25:12/0 = 0
+26:12/0 = 0
+1:13/0 = 0
+3:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+12:13/0 = 0
+13:13/0 = 0
+14:13/0 = 0
+15:13/0 = 0
+16:13/0 = 0
+18:13/0 = 0
+19:13/0 = 0
+20:13/0 = 0
+21:13/0 = 0
+22:13/0 = 0
+23:13/0 = 0
+24:13/0 = 0
+25:13/0 = 0
+26:13/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+12:14/0 = 0
+13:14/0 = 0
+14:14/0 = 0
+15:14/0 = 0
+16:14/0 = 0
+18:14/0 = 0
+19:14/0 = 0
+20:14/0 = 0
+21:14/0 = 0
+22:14/0 = 0
+23:14/0 = 0
+24:14/0 = 0
+25:14/0 = 0
+26:14/0 = 0
+1:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+12:15/0 = 0
+13:15/0 = 0
+14:15/0 = 0
+15:15/0 = 0
+16:15/0 = 0
+18:15/0 = 0
+19:15/0 = 0
+20:15/0 = 0
+21:15/0 = 0
+22:15/0 = 0
+23:15/0 = 0
+24:15/0 = 0
+25:15/0 = 0
+26:15/0 = 0
+1:16/0 = 0
+3:16/0 = 0
+4:16/0 = 0
+12:16/0 = 0
+13:16/0 = 0
+14:16/0 = 0
+15:16/0 = 0
+16:16/0 = 0
+18:16/0 = 0
+19:16/0 = 0
+20:16/0 = 0
+21:16/0 = 0
+22:16/0 = 0
+23:16/0 = 0
+24:16/0 = 0
+25:16/0 = 0
+26:16/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_loij8"]
+sources/0 = SubResource("TileSetAtlasSource_gmvk5")
+
+[node name="Town" type="Node2D"]
+script = ExtResource("1_flk0s")
+PlayerScene = ExtResource("2_e0y2f")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-34, -195)
+collision_layer = 3
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2407, 1188)
+shape = SubResource("RectangleShape2D_l8ni6")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_loij8")
+rendering_quadrant_size = 32
+format = 2
+
+[node name="Building03" type="Sprite2D" parent="TileMap"]
+position = Vector2(-867, 447)
+scale = Vector2(5.81738, 3.87422)
+texture = ExtResource("2_t4uao")
+
+[node name="Building04" type="Sprite2D" parent="TileMap"]
+position = Vector2(860, 366)
+scale = Vector2(2.9563, 4.6123)
+texture = ExtResource("2_t4uao")
+
+[node name="Building05" type="Sprite2D" parent="TileMap"]
+position = Vector2(-179, 562)
+scale = Vector2(5.19727, 1.70536)
+texture = ExtResource("3_n7iva")
+
+[node name="Building06" type="Sprite2D" parent="TileMap"]
+position = Vector2(484.438, 623.938)
+scale = Vector2(4.36816, 1.58873)
+texture = ExtResource("3_n7iva")
+
+[node name="SpawnLocations" type="Node2D" parent="."]
+
+[node name="0" type="Node2D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
+position = Vector2(559, 675)
+
+[node name="1" type="Node2D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
+position = Vector2(-464, 524)
+
+[node name="2" type="Node2D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
+position = Vector2(321, 112)
+
+[node name="3" type="Node2D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
+position = Vector2(-137, 516)
+
+[node name="Node" type="Node2D" parent="SpawnLocations"]
+position = Vector2(381, 495)
+
+[node name="gravity" parent="SpawnLocations/Node" instance=ExtResource("4_ue55h")]
+position = Vector2(307, 185)
